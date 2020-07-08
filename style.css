@@ -1,0 +1,553 @@
+:root {
+  --white: white;
+  --black: black;
+  --turq: #00ced1;
+  --grey: rgb(197, 197, 197, 0.6);
+}
+
+.grid-container {
+  display: grid;
+  gap: 0 0;
+  grid-gap: 0;
+  grid-template-columns: 100vw;
+  background-color: lightblue;
+  padding: 0;
+  margin: 0;
+  grid-template-areas: "a" "b" "c" "d" "e" "f" "g";
+  align-items: center;
+  justify-items: center;
+  align-self: center;
+}
+
+.grid-container > div {
+  padding: 0.8vw 20vw;
+  font-size: 1rem;
+  box-shadow: 10px 0px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.a {
+  display: grid;
+  grid-area: a;
+  background-image: url(pics/bgk-header.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.9;
+}
+
+.b {
+  display: grid;
+  grid-area: b;
+  background: white;
+}
+
+.c {
+  display: grid;
+  grid-area: c;
+  background-image: url(pics/bgk-middle.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.9;
+  color: var(--white);
+}
+
+.d {
+  display: grid;
+  grid-area: d;
+  align-items: center;
+  justify-items: center;
+  background: white;
+}
+
+.e {
+  grid-area: e;
+  background-image: url(pics/bgk-header.png);
+  background-position: center;
+  background-repeat: no-repeat
+  opacity: 0.9;
+}
+
+.f {
+  grid-area: f;
+  background: white;
+}
+
+.g {
+  grid-area: g;
+  background-image: url(pics/bgk-footer.png);
+  background-position: center;
+  opacity: 0.9;
+  background-repeat: no-repeat;
+}
+
+.sub-grid-a {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 80px auto;
+  gap: 0;
+  grid-gap: 0;
+  background-color: none;
+  padding: 0;
+  grid-template-areas: "aa" "ab";
+  width: 70vw;
+  max-width: 800px;
+}
+
+.aa {
+  grid-area: aa;
+  display: flex;
+  flex-direction: row;
+  left: 0%;
+  top: 0%;
+  justify-content: space-between;
+}
+
+ul {
+  position: relative;
+  left: 0%;
+  top: -5%;
+}
+
+li {
+  display: inline;
+  white-space: nowrap;
+}
+
+
+.aa p {
+  position: relative;
+  color: var(--turq);
+  left: 100%;
+  top: -80%;
+  font-size: larger;
+  font-weight: lighter;
+}
+
+.aa a {
+  color: var(--white);
+  padding: 0.2em;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.6em;
+  
+}
+
+.aa a:hover {
+  color: var(--black);
+}
+
+.az p {
+  display: none;
+}
+
+.ab {
+  grid-area: ab;
+  color: var(--white);
+  text-align: center;
+  padding: 5% 10% 10% 10%;
+}
+
+
+
+.sub-grid-b {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  gap: 0 0;
+  grid-gap: 0;
+  background-color: none;
+  padding: 0;
+  grid-template-areas: "ba bb";
+  width: 70vw;
+  max-width: 800px;
+}
+
+.ba {
+  grid-area: ba;
+  align-content: right;
+  justify-content: right;
+  padding: 3em 0 0 10vw;
+}
+
+.bb {
+  grid-area: bb;
+  color: var(--black);
+  text-align: left;
+  justify-content: left;
+  padding: 0 10vw 0 0;
+}
+
+.sub-grid-c {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: 0;
+  grid-gap: 0;
+  background-color: none;
+  padding: 0;
+  grid-template-areas: "ca";
+  color: var(--white);
+  width: 70vw;
+  max-width: 800px;
+}
+
+.ca {
+  grid-area: ca;
+  text-align: center;
+  text-justify: center;
+  padding: 9em 1em 9em 1em;
+}
+
+.sub-grid-d {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 0;
+  background-color: none;
+  padding: 0;
+  grid-template-areas: "da da da" "db dc dd" "de df dg";
+  color: var(--black);
+
+  justify-content: space-evenly;
+  width: 70vw;
+  max-width: 800px;
+}
+.d h4 {
+  grid-area: d;
+  text-align: center;
+  text-justify: center;
+  height: 3em;
+}
+
+.sub-grid-d div {
+  text-align: center;
+  text-justify: center;
+  padding: 0 1rem 0 1rem;
+}
+
+.da {
+  grid-area: da;
+}
+
+.db {
+  grid-area: db;
+  border-right: 0.1rem solid var(--grey);
+  border-bottom: 0.1rem solid var(--grey);
+}
+
+.dc {
+  grid-area: dc;
+  border-right: 0.1rem solid var(--grey);
+  border-bottom: 0.1rem solid var(--grey);
+}
+
+.dd {
+  grid-area: dd;
+  border-bottom: 0.1rem solid var(--grey);
+}
+
+.de {
+  grid-area: de;
+  border-right: 0.1rem solid var(--grey);
+}
+
+.df {
+  grid-area: df;
+  border-right: 0.1rem solid var(--grey);
+}
+
+.dg {
+  grid-area: dg;
+}
+
+.sub-grid-e {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: 0;
+  grid-gap: 0;
+  background-color: none;
+  padding: 0;
+  grid-template-areas: "ea" "eb" "ec";
+  color: var(--white);
+  width: 70vw;
+  max-width: 800px;
+  word-break:normal;
+  margin: 0;
+}
+
+.sub-grid-e > div {
+  text-align: center;
+  text-justify: center;
+  padding: 1em;
+}
+
+.e img {
+  width: 22vw;
+  height: auto;
+  max-width: 160px;
+  margin: 5px;
+  image-orientation: 0deg;
+}
+
+.ea {
+  grid-area: ea;
+}
+
+.eb {
+  grid-area: eb;
+  display: flex;
+  flex-direction: row;
+}
+
+.ec {
+  grid-area: ec;
+}
+
+
+.sub-grid-f {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  grid-template-rows: auto;
+  gap: 0;
+  grid-gap: 0;
+  background-color: none;
+  padding: 0;
+  grid-template-areas: "fa fb";
+  color: var(--black);
+  width: 70vw;
+  max-width: 800px;
+  word-wrap: break-word;
+  margin: 0;
+}
+
+.f h2 {
+  margin: 0;
+}
+
+.fa {
+  grid-area: fa;
+  text-align: left;
+  text-justify: left;
+  padding: 1em 0rem;
+}
+
+.fa textarea {
+  margin: 1em 0 0 0;
+  min-height: 2.5em;
+  height: 2.5vw;
+  width: 38vw;
+  max-width:450px;
+  border: 0.1em solid var(--grey);
+  color: var(--black);
+  resize: none;
+}
+
+::placeholder {
+  color: var(--grey);
+}
+
+.fa textarea.z {
+  margin: 1em 0 1rem 0;
+  height: 7.5vw;
+  min-height: 7.5em;
+}
+
+.fb {
+  grid-area: fb;
+  text-align: left;
+  text-justify: left;
+  padding: 1em 0rem;
+}
+
+.fb img {
+  width: 9vw;
+  max-width: 70px;
+  padding: 1vw 2.5vw 2.5vw 0;
+}
+
+.sub-grid-g {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 0;
+  grid-gap: 0;
+  background-color: none;
+  padding: 0;
+  grid-template-areas: "ga gb gc" "gd ge gf" "gg gg gh";
+  color: var(--white);
+  width: 70vw;  
+  max-width: 800px;
+}
+
+.ga {
+  grid-area: ga;
+  text-align: left;
+  text-justify: left;
+  color: var(--turq);
+  padding: 0 1em;
+}
+
+.ga img {
+  float: left;
+  padding: 0 1em 0 0;
+}
+
+.gb, {
+  grid-area: gb;
+  text-align: left;
+  text-justify: left;
+  padding: 0 1em;
+}
+
+.gc {
+  grid-area: gc;
+  text-align: left;
+  text-justify: left;
+  padding: 0 1em;
+}
+
+.gd {
+  grid-area: gd;
+  text-align: left;
+  text-justify: left;
+  padding: 0 1em;
+}
+
+.ge {
+  grid-area: ge;
+  text-align: left;
+  text-justify: left;
+  padding: 0 1em;
+}
+
+.ge img {
+  float: left;
+  margin-right: 1.5em;
+}
+
+.gf {
+  grid-area: gf;
+  text-align: left;
+  text-justify: left;
+  padding: 0 1em;
+}
+
+.gf button {
+  color: var(--white);
+  border-color: var(--white);
+  padding: 0.8em;
+  margin: 0 0 1.5em 0;
+}
+
+.gf img {
+  float: left;
+  margin-right: 0.4em;
+  height: 1.8em;
+}
+
+.gfsub {
+  width: 2rem;
+  background-color: var(--grey);
+  border: 0.4em solid var(--grey);
+  opacity: 0.3;
+  position: absolute;
+}
+
+.gg {
+  grid-area: gg;
+  text-align: left;
+  text-justify: center;
+  padding: 0.5em;
+}
+
+.gg a {
+  text-decoration: none;
+  color: var(--white);
+  padding: 0.5em;
+}
+
+.gh {
+  grid-area: gh;
+  text-align: center;
+  text-justify: center;
+  padding: 1em;
+  font-size: 0.7em;
+}
+
+.styline {
+  background-color: var(--turq);
+  width: 5em;
+  height: 0.05em;
+  border-width: 0;
+}
+
+.butstyle {
+  background: none;
+  color: var(--turq);
+  border-style: solid;
+  border-width: 0.05em;
+  border-color: var(--turq);
+  border-radius: 0.2em;
+  padding: 0.5em;
+  font-size: 0.8em;
+}
+
+.tajam {
+  font-size: larger;
+  font-weight: lighter;
+}
+
+@media only screen and (max-width: 800px) {
+  grid-container > div {
+    padding: 1vw 5vw;
+  }
+
+  .sub-grid-a, 
+  .sub-grid-b, 
+  .sub-grid-c, 
+  .sub-grid-d, 
+  .sub-grid-e, 
+  .sub-grid-f, 
+  .sub-grid-g {
+    width: 100vw;
+  }
+
+  .fa textarea {
+    width: 38vw;
+}
+
+  h4, h2, h3 {
+    font-size: 0.7em;
+    word-break: normal;
+  }
+
+  .eb {
+    flex-direction: column;
+  }
+
+  .az p {
+    display: block;
+    left: -7vw;
+    top: -10%;
+    color: white;
+  }
+
+ 
+
+  .az:hover .drop{
+    display: block;
+  }
+
+  .drop{
+    display: none;
+    position: absolute;
+    left: 65vw;
+    top: 4%;
+    background: gray;
+    width: 70px;
+    padding: 20px;
+    line-height: 2em;
+    z-index: 1;
+  }
+
+  
